@@ -32,11 +32,11 @@ body {
   font-size: 18px;
   font-family: "Arial", sans-serif;
   font-weight: bold;
-  border-radius: 30px; /* Bordas arredondadas mais pronunciadas */
+  border-radius: 30px; 
   cursor: pointer;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s,
-    border-radius 0.5s; /* Adiciona transições suaves para a mudança de cor, sombra, efeito de escala e bordas */
+    border-radius 0.5s; 
 }
 
 #btn-clean {
@@ -51,29 +51,29 @@ body {
   font-size: 13px;
   font-family: "Arial", sans-serif;
   font-weight: bold;
-  border-radius: 30px; /* Bordas arredondadas mais pronunciadas */
+  border-radius: 30px; 
   cursor: pointer;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s,
-    border-radius 0.5s; /* Adiciona transições suaves para a mudança de cor, sombra, efeito de escala e bordas */
+    border-radius 0.5s; 
 }
 
 #btn-go:hover {
   background: linear-gradient(to bottom, #45a049, #4caf50);
   transform: translateY(
     -2px
-  ); /* Eleva ligeiramente o botão ao passar o mouse sobre ele */
-  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Sombras mais pronunciadas */
-  border-radius: 35px; /* Aumenta as bordas arredondadas */
+  ); 
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); 
+  border-radius: 35px; 
 }
 
 #btn-go:focus {
-  outline: none; /* Remove a borda de foco padrão */
+  outline: none; 
 }
 
 .btn-go:active {
   background: linear-gradient(to bottom, #3e8e41, #45a049);
-  transform: translateY(1px); /* Empurra o botão para baixo ao ser clicado */
+  transform: translateY(1px); 
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
 

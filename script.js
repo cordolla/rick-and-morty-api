@@ -9,7 +9,6 @@ const fetchApi = (value) => {
   const result = fetch(`https://rickandmortyapi.com/api/character/${value}`)
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
     return data;
   });
 
@@ -33,6 +32,5 @@ btnGo.addEventListener('click', async (e) => {
   e.preventDefault();
   const result = await fetchApi(characterId.value);
   image.src = `${result.image}`;
-  buildResult(result);
-  
+  buildResult(result);  
 });
