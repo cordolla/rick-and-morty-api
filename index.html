@@ -15,13 +15,13 @@
       <input type="number" name="" id="characterId" />
       <button id="btn-go">GO</button>
     </form>
-    <div id="filter">
-      <h3>Filtros:</h4>
+    <form id="filter">
+      <h3>Filtros:</h3>
       <label for="name">Nome</label>
       <input type="checkbox" name="name" id="name" />
 
       <label for="status">Status</label>
-      <input type="checkbox" name="status" id="script" />
+      <input type="checkbox" name="status" id="status" />
 
       <label for="species">Especie</label>
       <input type="checkbox" name="species" id="species" />
@@ -32,14 +32,15 @@
       <label for="origin">Origem</label>
       <input type="checkbox" name="origin" id="origin" />
 
-      <label for="image">Imagem</label>
-      <input type="checkbox" name="image" id="image" />
-
       <label for="episode">Episodio</label>
       <input type="checkbox" name="episode" id="episode" />
+
+      <button type="reset" id="btn-clean">limpar</button>
+    </form>
+    <div id="result-style">
+      <img src="" alt="" id="img" />
+      <div id="content"></div>
     </div>
-    <pre id="content"></pre>
-    <img src="" alt="" id="img" />
   </body>
   <script src="./script.js"></script>
 </html>

@@ -1,44 +1,38 @@
 const btnGo = document.getElementById("btn-go");
+const btnClean = document.getElementById("btn-Clean");
 const characterId = document.getElementById("characterId");
+const containerResult = document.getElementById("result-style");
 const content = document.getElementById("content");
 const image = document.getElementById("img");
 
-const fetchApi = async (value) => {
-  const response = await fetch(
-    `https://rickandmortyapi.com/api/character/${value}`
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      return data;
-    });
-  return response;
-};
+const fetchApi = (value) => {
+  const result = fetch(`https://rickandmortyapi.com/api/character/${value}`)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    return data;
+  });
 
-const keys = [
-  "name",
-  "status",
-  "species",
-  "gender",
-  "origin",
-  "image",
-  "episode",
-];
+  return result;
+}
 
-const buildResult = (response) => {
-  const newObject = {};
-  keys
-    .map((key) => document.getElementById(key))
+const keys = ["name", "status", "species", "gender", "origin", "episode"];
+
+const buildResult = (result) => {
+  return keys.map((key) => document.getElementById(key))
     .map((elem) => {
-      elem.checked && (newObject[elem.name] = response[elem.name]);
-    });
+      if(elem.checked && typeof(result[elem.name]) !== 'object'){
+        const newElem = document.createElement("p");
+        newElem.innerHTML = `${elem.name}: ${result[elem.name]}`;
+        content.appendChild(newElem);
+      }
+    });    
+}
 
-  return newObject;
-};
-
-btnGo.addEventListener("click", async (e) => {
+btnGo.addEventListener('click', async (e) => {
   e.preventDefault();
-  const response = await fetchApi(characterId.value);
-  //content.textContent = `${JSON.stringify(response, undefined, 2)}`;
-  image.src = `${response.image}`;
+  const result = await fetchApi(characterId.value);
+  image.src = `${result.image}`;
+  buildResult(result);
+  
 });
