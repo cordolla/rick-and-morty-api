@@ -11,7 +11,7 @@ const fetchApi = (value) => {
   .then((data) => {
     return data;
   });
-
+  
   return result;
 }
 
