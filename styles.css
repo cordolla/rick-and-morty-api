@@ -91,3 +91,21 @@ body {
 #filter input {
   cursor: pointer;
 }
+
+.result-style {
+  display: flex;
+  text-align: left;
+  width: 45%;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 30px rgb(0 0 0 / 0.7);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+img {
+  max-height: 200px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
